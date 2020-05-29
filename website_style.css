@@ -1,0 +1,359 @@
+/*CSS for Midterm*/
+
+
+/*headers*/
+
+h1	{ 
+    color: #003B73;
+    font-size: 50px;
+    text-align: center;
+    width: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2  {
+    color: #003B73;
+    font-size: 30px;
+    text-align: center;
+    width: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Navigation Bar*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #BFD7ED;
+}
+
+li, a, button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #003B73;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5%;
+}
+
+.logo {
+    height: 120px;
+    width: 155px;
+    cursor: pointer;  
+}
+
+.nav__links {
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 20px;
+    
+}
+
+.nav__links li a {
+    transition: all 0.3 ease 0s;
+    
+}
+
+.nav__links li a:hover {
+    color: #0074B7;
+}
+
+button {
+    padding: 9px 25px;
+    background-color: rgba(0, 116, 183, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3 ease 0s;
+    color: #ffffff;
+}
+
+button:hover {
+    background-color: rgba(0, 116, 183, .8);
+}
+
+@media only screen and (max-width: 1100px) {
+    li, a, button {
+        font-size: 15px;
+    }
+
+    .logo {
+        height: 96px;
+        width: 124px;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    li, a, button {
+        font-size: 12px;
+    }
+
+    .logo {
+        height: 72px;
+        width: 93px;
+    }
+}
+
+@media only screen and (max-width: 820px) {
+    li, a, button {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 820px) {
+    li, a, button {
+        font-size: 8px;
+    }
+
+    .logo {
+        height: 48px;
+        width: 62px;
+    }
+}
+
+
+
+/*.navbar {
+    background-color: #0DAEFF;
+    padding: 0px;
+    border-style: solid;
+    border-color: #000000;
+    overflow: hidden;
+    list-style-type: none;
+    margin-left: 10px;
+}
+
+li a{
+    color: white;
+
+    font-family: arial;
+    display: block;
+    float: left;
+    padding: 20px 4%;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111111;
+}*/
+
+
+/*Resizing nav bar*/
+/*
+@media only screen and (max-width: 1200px) {
+    li a {
+        font-size: 19px;
+        padding: 20px 3.75%;
+    }
+}
+
+@media only screen and (max-width: 1060px) {
+    li a {
+        font-size: 18px;
+        padding: 20px 3.5%;
+    }
+}
+
+@media only screen and (max-width: 940px) {
+    li a {
+        font-size: 17px;
+        padding: 20px 3.25%;
+    }
+}
+
+@media only screen and (max-width: 835px) {
+    li a {
+        font-size: 16px;
+        padding: 20px 3.1%;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    li a {
+        font-size: 15px;
+        padding: 20px 3.05%;
+    }
+}
+
+@media only screen and (max-width: 705px) {
+    li a {
+        font-size: 14px;
+        padding: 20px 3.025%;
+    }
+}
+
+@media only screen and (max-width: 655px) {
+    li a {
+        font-size: 13px;
+        padding: 20px 3.01%;
+    }
+}
+
+@media only screen and (max-width: 615px) {
+    li a {
+        font-size: 12px;
+        padding: 20px 3.005%;
+    }
+}
+
+@media only screen and (max-width: 565px) {
+    li a {
+        font-size: 11px;
+        padding: 20px 3%;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    li a {
+        font-size: 10.5px;
+        padding: 20px 3%;
+    }
+}
+*/
+
+/*footer*/
+
+/*footer*/
+
+footer {
+    bottom: 0;
+    background-color: #0074B7;
+}
+ 
+@media (max-height:850px) {
+	footer { position: static; }
+	header { padding-top: 40px; }
+}
+ 
+ 
+.footer-distributed {
+	box-sizing: border-box;
+	width: 105%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 50px 50px 60px 50px;
+    margin-top: 100px;
+    margin-left: -10px;
+}
+ 
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+    vertical-align: top;
+    background-color: rgba(0, 0, 0, 0);
+}
+ 
+/* Footer left */
+ 
+.footer-distributed .footer-left{
+    width: 30%;
+    background-color: rgba(0, 0, 0, 0);
+}
+ 
+.footer-distributed h4{
+	color:  #ffffff;
+	font: normal 37px 'Cookie', cursive;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+ 
+/* Footer links */
+ 
+.footer-distributed .footer-links{
+	color:  #ffffff;
+    margin: 20px 0 12px;
+    background-color: rgba(0, 0, 0, 0);
+}
+ 
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+    color:  inherit;
+    background-color: rgba(0, 0, 0, 0);
+}
+ 
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* Footer Center */
+ 
+.footer-distributed .footer-center{
+    width: 35%;
+    margin-top: 30px;
+    background-color: rgba(0, 0, 0, 0);
+}
+ 
+ 
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+    margin:0;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.footer-distributed .geninfo{
+    background-color: rgba(0, 0, 0, 0);
+}
+ 
+/* Footer Right */
+ 
+.footer-distributed .footer-right{
+    width: 30%;
+    margin-top: 40px;
+    background-color: rgba(0, 0, 0, 0);
+}
+ 
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 15px;
+	font-weight: normal;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+ 
+.footer-distributed .social-media{
+    margin-top: 25px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0);
+}
+ 
+/* For screen size adjustment */
+ 
+@media (max-width: 1000px) {
+ 
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+ 
+	.footer-distributed .footer-center i{
+        margin-left: 0;
+        
+	}
+ 
+}
