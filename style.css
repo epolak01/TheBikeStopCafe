@@ -26,7 +26,7 @@ body {
     height: 5vh;
     font-size: 4vh;
     color: white;
-    background-color: darkslategray;
+    background-color: rgba(47, 79, 79, .95);
 }
 
 #bikeContainer {
