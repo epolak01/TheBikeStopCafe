@@ -1,0 +1,100 @@
+body {
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    overflow: hidden;
+    background-color: gray;
+}
+
+#onload{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 200vh;
+    background-color: gray;
+    transition: 5s opacity;
+    opacity: 100%;
+    z-index: 1;
+}
+
+#header{
+    width: 100vw;
+    top: 0;
+    left: 0;
+    position: fixed;
+    height: 5vh;
+    font-size: 4vh;
+    color: white;
+    background-color: darkslategray;
+}
+
+#bikeContainer {
+    height: 100vh;
+    width: 100vw;
+}
+
+#bike{
+    display: block;
+    bottom: 0;
+    padding: 20px;
+    width: 60vw;
+    max-height: 50vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8vh;
+}
+
+#flower{
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    opacity: 10%;
+    min-height: 100vh;
+    min-width: 80vw;
+    max-height: 280vh;
+}
+
+/** 
+when desktop: {
+rotate flower
+
+}
+
+
+*/
+
+#title{
+    font-family: 'Caudex', serif;
+    font-size: 8vw;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    text-align: center;
+}
+
+h1{
+    position: relative;
+    text-align: center;
+    font-weight: 100;
+    font-size: 3.5vw;
+    top: -4vw;
+    font-family: 'Times New Roman', Times, serif
+}
+
+.button {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 3rem;
+    border-radius: 20%;
+    padding: 1.5%;
+    border: 0.2rem solid black;
+    font-family: 'Times New Roman', Times, serif
+  }
