@@ -4,7 +4,7 @@ body {
     margin: 0;
     width: 100vw;
     /*overflow: hidden;*/
-    background-color: gray;
+    background-color: rgb(235, 235, 235);
 }
 
 #onload{
@@ -12,8 +12,8 @@ body {
     top: 0;
     width: 100vw;
     height: 200vh;
-    background-color: gray;
-    transition: 5s opacity;
+    /*background-color: gray;*/
+    transition: 3s opacity;
     opacity: 100%;
     z-index: 1;
 }
@@ -26,7 +26,7 @@ body {
     height: 5vh;
     font-size: 4vh;
     color: white;
-    background-color: rgba(47, 79, 79, .95);
+    background-color: rgba(0, 20, 40, .8);
 }
 
 #bikeContainer {
@@ -38,12 +38,13 @@ body {
     display: block;
     bottom: 0;
     padding: 20px;
-    width: 60vw;
-    max-height: 50vh;
+    width: 36vw;
+    max-height: 30vh;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 8vh;
+    overflow: hidden;
 }
 
 #flower{
@@ -75,7 +76,7 @@ rotate flower
 
 #title{
     font-family: 'Caudex', serif;
-    font-size: 8vw;
+    font-size: 6vw;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -86,8 +87,8 @@ h1{
     position: relative;
     text-align: center;
     font-weight: 100;
-    font-size: 3.5vw;
-    top: -4vw;
+    font-size: 2.1vw;
+    top: -1vw;
     font-family: 'Times New Roman', Times, serif
 }
 
@@ -95,7 +96,7 @@ h1{
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    background-color: transparent;
+    background-color: gray;
     color: black;
     text-align: center;
     text-decoration: none;
@@ -134,7 +135,7 @@ nav {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    background-color: transparent;
+    background-color: rgb(217, 217, 217);
     color: black;
     text-align: center;
     text-decoration: none;

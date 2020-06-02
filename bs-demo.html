@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Caudex&family=Frank+Ruhl+Libre&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caudex&family=Frank+Ruhl+Libre&display=swap" rel="stylesheet">
 
+    <script src="jquery-3.4.1.js"></script>
+    <style type="text/css">
+
+
+    </style>
+
+    <script language='javascript'>
+
+        $(document).ready(function () {
+            $("#bike").slideDown(4000);
+        });
+
+        //Bike wheels moving animation
+    </script>
+</head>
 
 
 <body>
@@ -14,7 +30,7 @@
     
     <div id = "header">Open Now! /// Closed, open XX:XX on XXXX</div>
     <div id = "bikeContainer">
-        <img id = "bike" src = "bikestop/resources/bike2h.svg" alt="Logo Error">
+        <img id = "bike" style="display: none" src = "bikestop/resources/bike2h.svg" alt="Logo Error">
         <div id = "title">
             Bike Stop Cafe
             <h1>
