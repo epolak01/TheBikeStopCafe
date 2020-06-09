@@ -14,23 +14,31 @@
 
     <script language='javascript'>
 
+        /*$(document).ready(function () {
+            $('#cl').fadeIn(4000);
+        });*/
+
+        /*$(document).ready(function () {
+                $('#header').slideDown(1000);
+        });*/
+
         $(document).ready(function () {
-            $("#bike").slideDown(4000);
-        });
+                $('#backimage').fadeIn(1500);
+            });
 
         //Bike wheels moving animation
+        //style="display: none"
     </script>
 </head>
 
 
-<body>
-    <div id = "onload"> </div>
-    <div class="backimage"></div>
+<body id="cl" >
+    <div class="backimage" id="backimage" style="display: none"></div>
     
     
     <div id = "header">Open Now! /// Closed, open XX:XX on XXXX</div>
     <div id = "bikeContainer">
-        <img id = "bike" style="display: none" src = "bikestop/resources/bike2h.svg" alt="Logo Error">
+        <img id = "bike" src = "bikestop/resources/bike2h.svg" alt="Logo Error">
         <div id = "title">
             Bike Stop Cafe
             <h1>
@@ -44,9 +52,9 @@
         
         <nav>
             <ul class="nav__links">
-                <li><a href="index.html"><button>home</button></a></li>
+                <li><a href="bs-demo.html"><button>home</button></a></li>
                 <li><a href="about.html"><button>about</button></a></li>
-                <li><a href="Menu.html"><button>menu</button></a></li>
+                <li><a href="menu.html"><button>menu</button></a></li>
             </ul>
         </nav>
 
