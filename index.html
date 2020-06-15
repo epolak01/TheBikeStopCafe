@@ -1,252 +1,101 @@
+<!--
+
+    ---------- TO DO: ----------
+    - Compress images
+    - Fix janky parrallax
+    - Menu demo
+    - Make bikewheels spin on laod??
+
+
+    ---------- DONE: -----------
+    
+
+-->
+
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset= "utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
 
-	<title>Home</title>
-	
-	<link rel="stylesheet" type="text/css" href= "website_style.css" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Caudex&family=Frank+Ruhl+Libre&display=swap" rel="stylesheet">
 
-	<script src="jquery-3.4.1.js"></script>
-	<style type="text/css">
-		img {
-			width: 100vw;
-		}
-
-		div#subtitle {
-			font-family: Arial, Helvetica, sans-serif;
-			font-size: 30px;
-			font-weight: bold;
-			text-align: center;
-
-		}
-
-		p.desc {
-			font-family: Arial, Helvetica, sans-serif;
-			font-size: 17px;
-		}
-
-		.button {
-  			text-align: center;
-  			text-decoration: none;
-			display: inline-block;
-			  
-			font-size: 20px;
-			margin: 0;
-
-			padding: 11px 25px;
-   			background-color: rgba(0, 116, 183, 1);
-    		border: none;
-    		border-radius: 50px;
-    		cursor: pointer;
-    		transition: all 0.3 ease 0s;
-    		color: #ffffff;
-
-			
-		}
-
-		.button:hover {
-  			background-color: #0088cc; /* Green */
-			color: white;
-		}
-
-		div#buttons {
-			text-align: center;
-		}
-
-		div.desc_title {
-			font-family: Arial, Helvetica, sans-serif;
-			font-size: 20px;
-			text-align: center;
-			color: #003B73;
-		}
-
-		p.desc {
-			font-family: Arial, Helvetica, sans-serif;
-			font-size: 18px;
-			text-align: center;
-			color: #003B73;
-		}
-
-		.flex_container {
-        	justify-content: center;
-			display: flex;
-        	flex-wrap: wrap;
-        	align-items: flex-start;
-        	align-content: flex-start;
-    	}
-
-    	.flex_container > div {
-       		width: 450px;
-			margin-right: 10px;
-			margin: 20px;
-		}
-
-		body, html {
-    height: 100%;
-}
-	.hero-image {
-  		background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("images/samuel-sianipar-scUBcasSvbE-unsplash.jpg");
-  		height: 50%;
-  		background-position: center;
-  		background-repeat: no-repeat;
-  		background-size: cover;
-  		position: relative;
-	}
-
-	.hero-text {
-  		text-align: center;
-  		position: absolute;
-  		top: 50%;
-  		left: 50%;
-  		transform: translate(-50%, -50%);
-		background-color: rgba(0, 0, 0, 0);
-	}
-
-	h1 {
-		background-color: rgba(0, 0, 0, 0);
-		color: #BFD7ED;
-	}
-	</style>
+    <script src="jquery-3.4.1.js"></script>
+    <style type="text/css">
 
 
-	<script language='javascript'>
+    </style>
 
-		$(document).ready(function () {
-				$("#motto").slideDown(1000);
-		});
+    <script language='javascript'>
 
-		$(document).ready(function () {
-				$("#image").slideDown(1500);
-		});
+        /*$(document).ready(function () {
+            $('#cl').fadeIn(4000);
+        });*/
 
-		$(document).ready(function () {
-				$("#subtitle").fadeIn(2000);
-		});
+        /*$(document).ready(function () {
+                $('#header').slideDown(1000);
+        });*/
 
-		$(document).ready(function () {
-				$("#buttons").fadeIn(2500);
-		});
+        $(document).ready(function () {
+                $('#backimage').fadeIn(1500);
+            });
 
-		$(document).ready(function () {
-				$("#flex_container").fadeIn(3000);
-		});
-		
-	</script>
-
+        //Bike wheels moving animation
+        //style="display: none"
+    </script>
 </head>
 
 
-<body bgcolor= "#ffffff"; >
-	<header>
-				<img class="logo" src="logos/logo6.png" alt="logo">
-				<nav>
-					<ul class="nav__links">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="questionaire.html">Appointments</a></li>
-						<li><a href="prices.html">Prices</a></li>
-						<li><a href="im.html">Messaging</a></li>
-						<li><a href="plumberpage.html">Our Plumbers</a></li>
-					</ul>
-				</nav>
-				<a class="cta" href="login.html"> <button>Login</button></a>
-	</header>
+<body id="cl" >
+    <div id="backimage" id="backimage" style=""></div>
+    
+    <div id = "header">Open Now! /// Closed, open XX:XX on XXXX</div>
+    <div id = "bikeContainer">
+        <img id = "bike" src = "resources/bike2h.svg" alt="Logo Error">
+        <div id = "title">
+            Bike Stop Cafe
+            <h1 style = "top: -2vw">
+                <p>Narragansett, RI </p>
+            </h1>
+        </div> 
+    </div>
+    <div style="height: 100vh; 
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    text-align: center;">
 
-	<div class="hero-image" style="display:none" id="image">
-		<div class="hero-text">
-			<h1>Plumber Pages</h1>
-		</div>
-	</div>
-	
-	</br>
-	</br>
-	<h2> Finding A Plumber Near You</h2>
+        <img class = "cren" src="resources/divtop.svg">
+        <h2>
+            <p>A community resturant centered on good food and even better people.</p>
+        </h2>
 
-
-</br>
-</br>
-
-	<div id='buttons' style="display:none">
-		<a href="clientSignUp.html" class="button">Client Sign Up</a>
-		&nbsp; &nbsp;
-		<a href="plumberSignUp.html" class="button">Plumber Sign Up</a>
-	</div>
-
-
-
-</br>
-<div class='flex_container' id='flex_container' style="display:none">
-
-	<div>
-	<div class='desc_title'><strong>What We Do:</strong></div>
-	<p class='desc'>Plumber Chat puts you in contact with highly rated experienced
-		plumbers at the click of a button. We guarantee a frictionless experience
-		that will resolve your issue quicker than you thought possible.
-	</p>
-	</div>
-
-	<div>
-	<div class='desc_title'><strong>Our Goals:</strong></div>
-	<p class='desc'>Plumber Chat aims to provide both plumbers and clients with the necessary
-		information for customers to quickly and easily recieve estimates on 
-		the their plumbing issue and arrange appointments with our database of 
-		professional plumbers.
-	</p>
-	</div>
-
-</div>
-</br>
-</br>
-
-
-
-
-		<footer class="footer-distributed">
-		
-			<div class="footer-left">
-				<h4>Plumber Pages</h4>
-		
-				<p class="footer-links" style="font-size: 16px">
-					<a href="index.html">Home</a>
-					|
-					<a href="about.html">About</a>
-					|
-					<a href="questionaire.html">Appointments</a>
-					|
-					<a href="prices.html">Prices</a>
-					|
-					<a href="plumberpage.html">Our Plumbers</a>
-				</p>
-		
-				<p class="footer-company-name">© PlumberPages.com</p>
-			</div>
-		
-		
-		
-			<div class="footer-center">
-				<div class="geninfo">
-					<p>Address: 288 Boston Ave,<br> &emsp;&emsp;&emsp;&emsp; Medford, MA, 02155</p>
-				</div>
-			</br>
-		
-				<div class="geninfo">
-					<p>Phone Number: 617-PLUM-PAGE</p>
-				</div>
-				</br>
-				<div class="geninfo">
-					<p>Email: plumberPages@business.com</p>
-				</div>
-			</div>
-			<div class="footer-right">
-				<p class="footer-company-about">
-					We connect you with nearby plumbers!</p>
-				<div class="social-media">
-					Follow us on Facebook, Instagram, and Twitter!
-				</div>
-			</div>
-		</footer>
+        <div id = "imgs">
+            
+            <img class = "food" src="resources/pizza.jpg">
+            <img class = "food" src="resources/burger.jpg">
+            <img class = "food" src="resources/noodles.jpg">
+            <nav> <ul class="nav__links"> <li><a href="bs-menu.html"><button>menu</button></a></li> </ul> </nav>
+            <img class = "cren" src="resources/divbot.svg">
+        </div>
+    </div>
+        <!--
+        <nav>
+            <ul class="nav__links">
+                <li><a href="bs-demo.html"><button>home</button></a></li>
+                <li><a href="about.html"><button>about</button></a></li>
+                <li><a href="menu.html"><button>menu</button></a></li>
+            </ul>
+        </nav>
+        -->
+        
+    </div>
+    
+    
 
 </body>
+<script src="main.js">
+//<img id = "flower" src="bikestop/resources/bw-flower2.svg" alt="">
+
+</script>
 </html>

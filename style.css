@@ -1,10 +1,15 @@
+/*html {
+    scroll-behavior: smooth;
+}*/
+
 body {
-    height: 100vh;
+    height: 200vh;
     padding: 0;
     margin: 0;
     width: 100vw;
-    /*overflow: hidden;*/
+    overflow-x: hidden;
     background-color: rgb(235, 235, 235);
+    
 }
 
 #onload{
@@ -22,7 +27,7 @@ body {
     width: 100vw;
     top: 0;
     left: 0;
-    position: fixed;
+    position: absolute;
     height: 5vh;
     font-size: 4vh;
     color: white;
@@ -38,8 +43,9 @@ body {
     display: block;
     bottom: 0;
     padding: 20px;
-    width: 36vw;
-    max-height: 30vh;
+    min-height: 50vh;
+    width: 60vw;
+    max-height: 60vh;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -47,23 +53,21 @@ body {
     overflow: hidden;
 }
 
-#flower{
+
+
+
+#backimage {
+    top: 30vh;
+    min-width: 300vw;
+    height: 200vh; 
     position: absolute;
-    bottom: 0;
-    top: 0;
-    opacity: 10%;
-    /*min-height: 100vh;
-    min-width: 80vw;*/
-    max-height: 280vh;
+    opacity: 7%;
+    transition: .09s ease-in-out;
+    /*background: transparent url("resources/bw-flower-h.svg") repeat scroll 0% 0%;*/
+    background: transparent url("resources/bw-flower-h.svg") repeat;
 }
 
-.backimage {
-    width:100%;
-    height:100%;
-    position: absolute;
-    opacity: 10%;
-    background: transparent url("bikestop/resources/bw-flower2.svg") repeat scroll 0% 0%;
-}
+
 
 #title{
     font-family: 'Caudex', serif;
@@ -79,8 +83,39 @@ h1{
     text-align: center;
     font-weight: 100;
     font-size: 2.1vw;
-    top: -1vw;
     font-family: 'Times New Roman', Times, serif
+}
+
+@media screen and (max-width: 800px) {
+    #bike {
+        width: 90vw;
+    }
+    #title {
+        font-size: 10vw;
+    }
+    h1{
+        position: relative;
+        text-align: center;
+        font-weight: 100;
+        font-size: 6vw;
+        font-family: 'Times New Roman', Times, serif
+    }
+}
+
+
+h2{
+    position: relative;
+    text-align: center;
+    font-weight: 100;
+    font-size: 2.1vw;
+}
+
+.cren {
+    max-width: 70vw;
+}
+
+.food {
+    max-height: 15vw;
 }
 
 nav {
@@ -113,16 +148,16 @@ nav {
 .nav__links li a button {
     cursor: pointer;
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: rgb(217, 217, 217);
+
+
+    background-color: transparent;
     color: black;
     text-align: center;
     text-decoration: none;
     display: block;
     font-size: 3rem;
-    border-radius: 20%;
+    border-radius: 10%;
     padding: 5%;
     border: 0.2rem solid black;
-    font-family: 'Times New Roman', Times, serif
+    font-family: 'Caudex', serif;
 }
