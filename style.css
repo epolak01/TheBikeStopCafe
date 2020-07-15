@@ -28,8 +28,8 @@ body {
     top: 0;
     left: 0;
     position: absolute;
-    height: 5vh;
-    font-size: 4vh;
+    height: 8vh;
+    font-size: 5vh;
     color: white;
     background-color: rgba(0, 20, 40, .8);
 }
@@ -65,6 +65,38 @@ body {
     transition: .09s ease-in-out;
     /*background: transparent url("resources/bw-flower-h.svg") repeat scroll 0% 0%;*/
     background: transparent url("resources/bw-flower-h.svg") repeat;
+}
+
+.parallax {
+  /* The image used */
+  background-image:  url('resources/flower_15.png');
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax_menu {
+  /* The image used */
+  background-image:  url('resources/flower_7.png');
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cren {
+    height: 150px;
 }
 
 
@@ -148,8 +180,6 @@ nav {
 .nav__links li a button {
     cursor: pointer;
     position: relative;
-
-
     background-color: transparent;
     color: black;
     text-align: center;
@@ -160,4 +190,29 @@ nav {
     padding: 5%;
     border: 0.2rem solid black;
     font-family: 'Caudex', serif;
+}
+
+.menu {
+    margin: auto;
+    width: 10%;
+}
+
+.menu a {
+    text-decoration: none;
+}
+
+.menu a button {
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 3rem;
+    border-radius: 10%;
+    padding: 5%;
+    border: 0.2rem solid black;
+    font-family: 'Caudex', serif;
+    
 }

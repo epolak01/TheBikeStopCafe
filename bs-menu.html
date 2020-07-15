@@ -11,9 +11,11 @@
     <style type="text/css">
         #bikeContainer1 {
             display: flex;
-            justify-content: space-between;
+            justify-content:center;
             align-items: center;
             padding: 35px 80px;
+            padding-top: 90px;
+            margin-left: 250px;
         }
 
         #bike1 {
@@ -28,6 +30,146 @@
         	flex-wrap: wrap;
         	align-items: flex-start;
         	align-content: flex-start;
+        }
+
+        .menu-content {
+        	justify-content: center;
+			display: flex;
+        	flex-wrap: wrap;
+        	align-items: flex-start;
+            align-content: flex-start;
+            margin-left: 250px; /* Same width as the sidebar + left position in px */
+        }
+        
+        .menu-content > div {
+            width: 300px;
+			margin-right: 10px;
+			margin: 20px;
+        }
+
+        .food-pic {
+            height: auto;
+            width: 150px;
+        }
+
+        .section-title {
+            font-family: 'Caudex', serif;
+            font-size: 60px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            text-align: center;
+            margin-left: 250px; /* Same width as the sidebar + left position in px */
+        }
+
+        .item .name {
+            font-family: 'Caudex', serif;
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        .item .desc {
+            font-family: 'Caudex', serif;
+            font-size: 14px;
+            float: left;
+            padding-bottom: 5px;
+        }
+
+        .item .price {
+            font-family: 'Caudex', serif;
+            font-size: 20px;
+            float: right;
+        }
+
+        .item-sep {
+            width: 60%;
+        }
+
+        .item .extra {
+            font-family: 'Caudex', serif;
+            font-size: 14px;
+            float: left;
+        }
+
+        .menu-display .extra-info{
+            margin-left: 250px; /* Same width as the sidebar + left position in px */
+        }
+
+        /*.menu__links {
+        	justify-content: space-around;
+			display: flex;
+        	flex-wrap: wrap;
+        	align-items: center;
+            align-content: flex-start;
+            background-color: rgba(153, 102, 51, .2);
+        }
+        
+        .menu__links > div {
+            width: 150px;
+			margin: 5px;
+        }
+
+        .menu__links a {
+            text-decoration: none;
+        }*/
+
+        .menu__links a button {
+            cursor: pointer;
+            position: relative;
+            background-color: transparent;
+            color: black;
+            text-decoration: none;
+            font-size: 25px;
+            border-radius: 10%;
+            border: 0.2rem solid black;
+            font-family: 'Caudex', serif;
+        }
+
+        .menu__links div {
+            padding-bottom: 5%;
+            text-align: center;
+        }
+
+        .menu__links {
+            width: 250px;
+            position: fixed;
+            z-index: 1;
+            top: 12%;
+            bottom: 7%;
+            border-radius: 3%;
+            background: rgba(153, 102, 51, .2);
+            overflow-x: hidden;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            left: 10px;
+            
+        }
+
+        .cren-center {
+            align-content: center;
+        }
+
+        .cren-top {
+            max-width: 200px;
+            align-content: center;
+            padding-left: 5%;
+        }
+
+        .cren-bot {
+            max-width: 200px;
+            align-content: center;
+            padding-left: 5%;
+        }
+
+        .extra-info {
+            text-align: center;
+            margin-left: 250px;
+        }
+
+        .info {
+            text-align: center; 
+            font-family: 'Caudex';
+            word-wrap: break-word;
         }
 
 
@@ -49,30 +191,632 @@
     <div id="onload"> </div>
     <div class="backimage"></div>
 
-
+    <div class="parallax_menu">
     <div id="header">Open Now! /// Closed, open XX:XX on XXXX</div>
     <div id="bikeContainer1">
-        <img id="bike1" src="resources/bike2h.svg" alt="Bike Logo">
+    <!--<img id="bike1" src="resources/bike2h.svg" alt="Bike Logo">-->
 
-        <nav>
+        <!--<nav>
             <ul class="nav__links">
                 <li><a href="index.html"><button>home</button></a></li>
                 <li><a href="about.html"><button>about</button></a></li>
-                <li><a href="menu.html"><button>menu</button></a></li>
             </ul>
         </nav>
 
+        <img id="bike1" src="resources/bike2h.svg" alt="Bike Logo">-->
         <img id="bike1" src="resources/bike2h.svg" alt="Bike Logo">
 
-
     </div>
 
-    <div id="flex_container">
-        <div><img id="menu1" src="images/menu_pg1.jpeg" alt="Menu Page 1"></div>
-        <img id="menu1" src="images/menu_pg2.jpeg" alt="Menu Page 1"></div>
-        <img id="menu1" src="images/menu_pg3.jpeg" alt="Menu Page 1"></div>
+
+    <div class="menu__links">
+        <div class="cren-center"><img class="cren-top" src="resources/divtop.svg"></div>
+        <div><a href="index.html"><button>Home</button></a></div>
+        <div><a href="#Appetizers"><button>Appetizers</button></a></div>
+        <div><a href="#Salads"><button>Salads</button></a></div>
+        <div><a href="#Sandwiches"><button>Sandwiches</button></a></div>
+        <div><a href="#Tacos"><button>Tacos</button></a></div>
+        <div><a href="#Entrees"><button>Entrees</button></a></div>
+        <div><a href="#Wood Fired Pizza"><button>Wood Fired Pizza</button></a></div>
+        <div><a href="#Specialty Pizzas"><button>Specialty Pizzas</button></a></div>
+        <div class="cren-center"><img class="cren-bot" src="resources/divbot.svg"></div>
+        
     </div>
 
+    <div id="menu-display">
+        <div style="margin-left: 250px;"> <hr class="item-sep"></div>
+        <a name="Appetizers"></a>
+        <div class="section-title">Appetizers</div>
+        
+
+        <div class="menu-content">
+            <!--<img class="food-pic" src="resources/smokedMoz.jpeg" alt="Photo by Patricia Tsernoshova on Unsplash">-->
+            <div class="item">
+                <div class="name">Smoked Mozzerella</div>
+                <hr class="item-sep">
+                <div class="desc">Smoked Mozzerella and Prosciutto on a flour tortilla topped with arugula and balsamic glaze.</div>
+                <div class="price">$9</div>
+            </div>
+
+            <div class="item">
+                <!--<img class="food-pic" src="resources/melissa-walker-horn-4mNO6-oMBEA-unsplash.jpg" alt="Photo by Melissa Walker on Unsplash">-->
+                <div class="name">Calamari</div>
+                <hr class="item-sep">
+                <div class="desc">Lightly battered calamari tossed with kalamata olives, oven roasted peppers and banana peppers & drizzled with balsamic glaze.</div>
+                <div class="price">$12.75</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Crispy Shrimp</div>
+                <hr class="item-sep">
+                <div class="desc">6 Tigerr shrimp wrrapped in a crispy wonton w/lemon grrass, serrvedd with a side of sweet chili sauce.</div>
+                <div class="price">$11</div>
+            </div>
+
+            <div class="item">
+                <div class="name">BBQ Pulled Pork Nachos</div>
+                <hr class="item-sep">
+                <div class="desc">Fresh corn tortilla chips topped with pulled pork, red onions, olives, jalapeno peppers & Monterey Jack cheese. Served with a side of house made salsa, guacamole and sour cream.</div>
+                <hr class="item-sep">
+                <div class="extra"> Extra Salsa $1 - Extra Guacamole $2.50 - w/o Pork $10</div>
+                <div class="price">$14</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Chips & Salsa</div>
+                <hr class="item-sep">
+                <div class="desc">Fresh corn tortilla chips served with house made salsa.</div>
+                <hr class="item-sep">
+                <div class="extra"> Sour Cream $1 - House made Guacamole $2.50 - Extra Salsa $1 - Add Cheese $2 </div>
+                <div class="price">$5</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Wings</div>
+                <hr class="item-sep">
+                <div class="desc">10 Spicy Buffalo, BBQ or Plain wings servedd with celery, carrots and a slide of Blue cheese.</div>
+                <hr class="item-sep">
+                <div class="extra"> Extra Blue Cheese $1 </div>
+                <div class="price">$12</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Chicken Fingers & Fries</div>
+                <hr class="item-sep">
+                <div class="desc">3 Chicken Fingers w/fries & our homemade Honey Mustard dressing.</div>
+                <div class="price">$8.50</div>
+            </div>
+
+            <div class="item">
+                <div class="name">French Fries</div>
+                <hr class="item-sep">
+                <div class="price">$4.50</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Truffle Fries</div>
+                <hr class="item-sep">
+                <div class="desc">French fries tossed with Truffle oil, Parmesan Cheese & parsley.</div>
+                <hr class="item-sep">
+                <div class="extra"> Served with a side of Horseradish Aioli $8.50 - w/BBQ Pulled Pork $11.50</div>
+            </div>
+        </div>
+
+        <div style="margin-left: 250px;">
+            <hr class="item-sep">
+        </div>
+
+        <a name="Salads"></a>
+        <div class="section-title">Salads</div>
+        
+        <div class="extra-info">
+            <hr class="item-sep">
+            <div class="info" style="text-align: center; font-family: 'Caudex'">Dressings: Blue Cheese, Ranch, Peppercorn Parmesan, Balsamic, Honey Mustard, Extra Dressing $0.50 each</div>
+            <div class="info" style="text-align: center; font-family: 'Caudex'">Add Chicken to any salad for $4 - Add Salmon (6oz) $9 - Add Feta $1.50 - Add Goat Cheese $2.50</div>
+            <hr class="item-sep">
+        </div>
+
+
+        <div class="menu-content">
+            <div class="item">
+                <div class="name">House Salad</div>
+                <hr class="item-sep">
+                <div class="desc">Mesclun Greens, tomatoes, red onions, cucumbers & kalamata olives topped with shredded carrots.</div>
+                <div class="price">$9</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Strawberry & Goat Cheese</div>
+                <hr class="item-sep">
+                <div class="desc">Mesclun greens topped with fresh strawberries, cucumbers, sliced almonds & goat cheese. Served with a side of homemade
+                strawberry vinaigrette.</div>
+                <div class="price">$13.50</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Avocado-Chick Pea Salad</div>
+                <hr class="item-sep">
+                <div class="desc">Mesclun greens topped with avocado, chick peas, carrots, cucumbers, and red onions and drizzled with oil and vinegar.</div>
+                <div class="price">$13.50</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Quinoa</div>
+                <hr class="item-sep">
+                <div class="desc">Organic Quinoa mixed with tomatoes, feta, red peppers, chick peas, red onions, jalapenos, lime juice, cilantro & topped
+                with avocado.</div>
+                <div class="price">$9</div>
+            </div>
+        </div>
+
+        <div class="parallax_menu">
+
+        <div class="extra-info">
+            <hr class="item-sep">
+            <div class="info" style="text-align: center; font-family: 'Caudex'">**ALLERGY WARNING: Although we have gluten free options, they are not prepped in a gluten free environment. Please alert
+            your server to any allergies.</div>
+        </div>
+
+        <div style="margin-left: 250px;">
+            <hr class="item-sep">
+        </div>
+
+
+        <a name="Sandwiches"></a>
+        <div class="section-title">Sandwiches</div>
+
+
+<!--CHAN?GE NAME TO CLASS-->
+
+
+        <div class="extra-info">
+            <hr class="item-sep">
+            <div class="info" style="text-align: center; font-family: 'Caudex'">All Sandwiches served with a generous side of fries.</div>
+            <div class="info" style="text-align: center; font-family: 'Caudex'">Substitute side salad for fries add $1.75 - Substitute Truffle
+            Fries for fries add $2.50 - Substitute **Homemade Gluten Free Bread add $4</div>
+            <hr class="item-sep">
+        </div>
+
+        <div class="menu-content">
+            <div class="item">
+                <div class="name">Sausage & Peppers</div>
+                <hr class="item-sep">
+                <div class="desc">Served on a house made roll with a side of fries.</div>
+                <hr class="item-sep">
+                <div class="extra">Add Cheese $1.00</div>
+                <div class="price">$10</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Sausage & Peppers</div>
+                <hr class="item-sep">
+                <div class="desc">Served on a house made roll with a side of fries.</div>
+                <hr class="item-sep">
+                <div class="extra">Add Cheese $1.00</div>
+                <div class="price">$10</div>
+            </div>
+            
+            <div class="item">
+                <div class="name">Meatball & Cheese</div>
+                <hr class="item-sep">
+                <div class="desc">Served on a house made roll with a side of fries.</div>
+                <div class="price">$10.75</div>
+            </div>
+            
+            <div class="item">
+                <div class="name">House Made Pulled Pork</div>
+                <hr class="item-sep">
+                <div class="desc">Topped w/slaw. Served on a house made roll with a side of fries.</div>
+                <div class="price">$11.50</div>
+            </div>
+            
+            <div class="item">
+                <div class="name">Veggie Burger</div>
+                <hr class="item-sep">
+                <div class="desc">A flavorful burger consisting of sweet potato, brown rice & dill, breaded with Panko & served with
+                    a side of horseradish
+                    mayo & Truffle Fries.</div>
+                <div class="price">$13.50</div>
+            </div>
+            
+            <div class="item">
+                <div class="name">Fish & Chips</div>
+                <hr class="item-sep">
+                <div class="desc">Fried breaded (not battered) local flounder served with a side of fries, homemade tartar sauce & a
+                    side of cole slaw.</div>
+                <div class="price">$14.50</div>
+            </div>
+            
+            <div class="item">
+                <div class="name">Lobster B.L.T</div>
+                <hr class="item-sep">
+                <div class="desc">4oz. Of Lobster (claws & knuckles) on a homemade roll and topped with lettuce, tomato, and
+                    Applewood Bacon. Served with
+                    a side of fries and a spicy lime aioli.</div>
+                <div class="price">$26</div>
+            </div>
+            
+            <div class="item">
+                <div class="name">Spicy Black Bean Burger</div>
+                <hr class="item-sep">
+                <div class="desc">Black beans, avocado, habaneros, roasted red peppers, brown & wild rice. Served on a homemade
+                    roll, topped with avocado
+                    and a side of Habanero aioli and French fries.</div>
+                <div class="price">$14</div>
+            </div>
+            
+            <div class="item">
+                <div class="name">Burger and a Beer</div>
+                <hr class="item-sep">
+                <div class="desc">A 6oz. Burger with American Cheese, mixed greens and tomato. Served on a grilled house made roll
+                    with a side of fries
+                    and a draft beer.</div>
+                <hr class="item-sep">
+                <div class="extra">w/o beer $9</div>
+                <div class="extra">Extra toppings available for additional charge (Avo $2, bacon $2, bbq pork $3, onions $1, roasted
+                    peppers $1, mushrooms
+                    $1)</div>
+                <div class="extra">Add a side of any of our sauces for $0.50. - Sub Goat Cheese Add $2</div>
+                <div class="price">$11</div>
+            </div>
+            
+            <div class="item">
+                <div class="name">Grilled Cheese</div>
+                <hr class="item-sep">
+                <div class="desc">Grilled homemade bread loaded with American & Cheddar cheese. Served with a side of fries.</div>
+                <hr class="item-sep">
+                <div class="extra">Additional toppings available (Tom, onions, roasted peppers $1 each, w/avocado add $2, add bacon
+                    or prosciutto for $2
+                    each, Sub Goat Cheese add $2)</div>
+                <div class="price">$10.50</div>
+            </div>
+            
+            <div class="item">
+                <div class="name">Lobster Grilled Cheese</div>
+                <hr class="item-sep">
+                <div class="desc">Our homemade grilled cheese loaded w/lobster. Served w/a side of fries.</div>
+                <hr class="item-sep">
+                <div class="extra">w/bacon add $2</div>
+                <div class="price">$26</div>
+            </div>
+            
+            <div class="item">
+                <div class="name">Barbeque Pulled Pork Grilled Cheese</div>
+                <hr class="item-sep">
+                <div class="desc">Served with a side of French fries.</div>
+                <div class="price">$13.50</div>
+            </div>
+        </div>
+
+        <div class="extra-info">
+            <hr class="item-sep">
+            <div class="info" style="text-align: center; font-family: 'Caudex'">**Our Pork & BBQ sauce are not gluten free. All gluten free bread is cooked on the same grill as products which contain
+            gluten</div>
+        </div>
+
+        
+
+        <div style="margin-left: 250px;">
+            <hr class="item-sep">
+        </div>
+        <a name="Tacos"></a>
+        <div class="section-title">Tacos</div>
+
+        <div class="extra-info">
+            <hr class="item-sep">
+            <div class="info" style="text-align: center; font-family: 'Caudex'">All Tacos available in a soft tortilla or hard shell. Substitute side salad or fries for chips & salsa add $2.</div>
+            <hr class="item-sep">
+        </div>
+
+        <div class="menu-content">
+            <div class="item">
+                <div class="name">Pulled Pork Tacos</div>
+                <hr class="item-sep">
+                <div class="desc">2 bbq pulled pork tacos topped with homemade slaw. Served with a side of fresh tortilla chips &
+                    salsa.</div>
+                <div class="price">$12</div>
+            </div>
+            
+            <div class="item">
+                <div class="name">Veggie Tacos</div>
+                <hr class="item-sep">
+                <div class="desc">Cauliflower, chick peas, red cabbage, diced jalapenos and avocado topped with aioli. Served with a
+                    side of chips and
+                    salsa.</div>
+                <hr class="item-sep">
+                <div class="extra">Vegan in a corn tortilla w/o sauce</div>
+                <div class="price">$12</div>
+            </div>
+            
+            <div class="item">
+                <div class="name">Fish Tacos</div>
+                <hr class="item-sep">
+                <div class="desc">Lightly battered local Flounder topped with our mango salsa & charred cabbage. Served with a side
+                    of homemade slaw &
+                    fresh tortilla chips & salsa.</div>
+                <div class="price">$12.50</div>
+            </div>
+            
+            <div class="item">
+                <div class="name">Grilled Salmon Tacos</div>
+                <hr class="item-sep">
+                <div class="desc">Grilled salmon tacos topped with mango salsa & charred cabbage. Served with a side of homemade
+                    slaw & fresh tortilla
+                    chips & salsa.</div>
+                <hr class="item-sep">
+                <div class="extra">Gluten Free with Corn Tortilla</div>
+                <div class="price">$12.50</div>
+            </div>
+        
+        </div>
+
+        <div class="extra-info">
+            <hr class="item-sep">
+            <div class="info" style="text-align: center; font-family: 'Caudex'">*Choose your own flavor w/your choice of sauce: horseradish, cilantro-lime, habanero or spicy lime add $0.75</div>
+            <div class="info" style="text-align: center; font-family: 'Caudex'">**Veggie Tacos & Salmon Tacos are G.F in a corn tortilla (tortilla is cooked in the same fryolator as products that
+            contain gluten)</div>
+        </div>
+        
+
+        <div style="margin-left: 250px;">
+            <hr class="item-sep">
+        </div>
+        <a name="Entrees"></a>
+        <div class="section-title">Entrees</div>
+
+        <div class="extra-info">
+            <hr class="item-sep">
+            <div class="info" style="text-align: center; font-family: 'Caudex'">All Entries served with a side salad</div>
+            <hr class="item-sep">
+        </div>
+        
+        
+        <div class="menu-content">
+            <div class="item">
+                <div class="name">Lobster Mac & Cheese</div>
+                <hr class="item-sep">
+                <div class="desc">Penne pasta with a creamy béchamel cheese sauce topped with lobster & baked in a cast iron skillet.</div>
+                <hr class="item-sep">
+                <div class="extra">Add Bacon $2</div>
+                <div class="price">$28</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Mac & Cheese</div>
+                <hr class="item-sep">
+                <div class="desc">Our Mac & Cheese baked in a cast iron skillet.</div>
+                <hr class="item-sep">
+                <div class="extra">Kids size $7 (children under 12 only)</div>
+                <div class="extra">Add Bacon $3 - Add BBQ Pulled Pork $4 - Add Buffalo Chicken $4</div>
+                <div class="price">$15</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Chipotle Chicken</div>
+                <hr class="item-sep">
+                <div class="desc">Grilled chicken with a smoky chipotle cream sauce served over penne pasta.</div>
+                <hr class="item-sep">
+                <div class="price">$19</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Pad Thai Noodles</div>
+                <hr class="item-sep">
+                <div class="desc">Pan fried rice noodles, bean sprouts, purple cabbage, carrots, egg, peanuts, cilantro & scallions in a tasty Thai sauce.</div>
+                <hr class="item-sep">
+                <div class="extra">w/Chicken $18 - w/Shrimp $20 - w/Lobster $24</div>
+                <div class="extra">Gluten Free</div>
+                <div class="price">$14</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Shrimp Scampi</div>
+                <hr class="item-sep">
+                <div class="desc">Penne pasta, Parmesan cheese, shrimp and cherry tomatoes in a lemon white wine sauce.</div>
+                <hr class="item-sep">
+                <div class="extra">w/Lobster $28</div>
+                <div class="price">$21</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Pasta Alfredo</div>
+                <hr class="item-sep">
+                <div class="desc">w/Chicken $20 - w/Shrimp $21 - w/Lobster $28</div>
+                <div class="price">$17</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Bourbon Salmon</div>
+                <hr class="item-sep">
+                <div class="desc">An 8oz. Salmon filet with a bourbon glaze. Served with a side of garlic mashed potatoes, fresh vegetable of the day and
+                a side salad.</div>
+                <div class="price">$21</div>
+            </div>
+        </div>
+        
+        <div class="extra-info">
+            <hr class="item-sep">
+            <div class="info" style="text-align: center; font-family: 'Caudex'">**ALLERGY WARNING: Although we have gluten free
+                options, they are not prepped in a gluten free environment. Please alert
+                your server to any allergies.</div>
+        </div>
+
+
+
+
+        
+
+        <div style="margin-left: 250px;">
+            <hr class="item-sep">
+        </div>
+        <a name="Wood Fired Pizza"></a>
+        <div class="section-title">Wood Fired Pizza</div>
+
+        <div class="extra-info">
+            <hr class="item-sep">
+            <div class="info" style="text-align: center; font-family: 'Caudex'">Hand stretched organic dough Sm. 12 inch $9 - Lg. 16 inch $14</div>
+            <div class="info" style="text-align: center; font-family: 'Caudex'">Additional Toppings: Small $1.25/Large $2.25</div>
+            <hr class="item-sep">
+            <div class="info" style="text-align: center; font-family: 'Caudex'">Toppings: Artichokes, Arugula, Bacon, Banana Peppers, Black Olives, Caramelized Onions, Chicken, Garlic, Jalapenos,
+            Kalamata Olives, Mesclun Greens, Mushrooms, Pork, Prosciutto, Red Onion, Pepperoni, Roasted Peppers, Sausage, Spinach or
+            Sundried Tomatoes.</div>
+            <hr class="item-sep">
+            <div class="info" style="text-align: center; font-family: 'Caudex'">Cheeses (Sm. $1/Lg $2): Add Fresh Mozz, Feta, Blue Cheese, Provolone, Parmesan. Add Goat (Sm. $2/Lg $4)</div>
+            <hr class="item-sep">
+            <div class="info" style="text-align: center; font-family: 'Caudex'">**Sub Vegan Cheese Sm. $2.75 - Lg. $5. Sub GLUTEN FREE/VEGAN CRUST $3 (small only)</div>
+            <hr class="item-sep">
+        </div>
+        
+        
+        <div class="menu-content">
+            <div class="item">
+                <div class="name">Calzone</div>
+                <hr class="item-sep">
+                <div class="desc">Served with cheese $0.25 per topping (4 toppings max)</div>
+                <hr class="item-sep">
+                <div class="extra">Blue Cheese/Ranch Add $1</div>
+                <div class="price">$9</div>
+            </div>
+
+            <div class="item">
+                <div class="name">The Carb Loader</div>
+                <hr class="item-sep">
+                <div class="desc">A baked ziti calzone with penne pasta, sausage, meatball, sauce & cheese.</div>
+                <div class="price">$9.50</div>
+            </div>
+        </div>
+        
+
+        <div style="margin-left: 250px;">
+            <hr class="item-sep">
+        </div>
+        <a name="Specialty Pizzas"></a>
+        <div class="section-title">Specialty Pizzas</div>
+
+        <div class="extra-info">
+            <hr class="item-sep">
+            <div class="info" style="text-align: center; font-family: 'Caudex'">Dressings: Blue Cheese, Ranch, Peppercorn
+                Parmesan, Balsamic, Honey Mustard, Extra Dressing $0.50 each</div>
+            <div class="info" style="text-align: center; font-family: 'Caudex'">Add Chicken to any salad for $4 - Add Salmon
+                (6oz) $9 - Add Feta $1.50 - Add Goat Cheese $2.50</div>
+            <hr class="item-sep">
+        </div>
+        
+        
+        <div class="menu-content">
+            <div class="item">
+                <div class="name">Veggie</div>
+                <hr class="item-sep">
+                <div class="desc">Mushrooms, caramelized onions, oven roasted peppers, olives, tomatoes, sauce & cheese.</div>
+                <div class="price">Sm. $14/Lg. $21</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Hawaiian</div>
+                <hr class="item-sep">
+                <div class="desc">Pulled pork w/pineapple, sauce & cheese.</div>
+                <hr class="item-sep">
+                <div class="extra">**Switch it up a little & top it with BBQ Sauce!</div>
+                <div class="price">Sm. $14/Lg. $21</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Truffle Oil</div>
+                <hr class="item-sep">
+                <div class="desc">With a garlic butter sauce & topped w/mozzarella cheese, kalamata olives, mushrooms, blue cheese & truffle oil.</div>
+                <div class="price">Sm. $14/Lg. $21</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Tomato, Basil & Fresh Mozzarella</div>
+                <hr class="item-sep">
+                <div class="desc">Simply good... w/pizza sauce & cheese.</div>
+                <hr class="item-sep">
+                <div class="extra">Delicious w/Sausage or Chicken (Add $1.25 Sm/$2.25 Lg)</div>
+                <div class="price">Sm. $14/Lg. $21</div>
+            </div>
+
+            <div class="item">
+                <div class="name">The Lobster Pizza</div>
+                <hr class="item-sep">
+                <div class="desc">Garlic butter, lobster, tomato, and red onions topped with mozzarella cheddar & parmesan cheese. Large Only.</div>
+                <hr class="item-sep">
+                <div class="extra">Make it a little more delicious and add some bacon! Add $2</div>
+                <div class="price">$27</div>
+            </div>
+
+            <div class="item">
+                <div class="name">The Common Man</div>
+                <hr class="item-sep">
+                <div class="desc">Bbq sauce topped with house made, slow cooked pulled pork, mozzarella cheese & slaw.</div>
+                <div class="price">Sm. $14/Lg. $21</div>
+            </div>
+
+            <div class="item">
+                <div class="name">The Running Man</div>
+                <hr class="item-sep">
+                <div class="desc">Chicken smothered in bbq sauce, bacon, caramelized onions & cheese (no red sauce)</div>
+                <div class="price">Sm. $14/Lg. $21</div>
+            </div>
+
+            <div class="item">
+                <div class="name">The Salad Pizza</div>
+                <hr class="item-sep">
+                <div class="desc">Garlic butter, roasted chicken, banana peppers and red onions topped with mesclun greens, tomatoes & ranch
+                dressing...simply delicious!</div>
+                <div class="price">Sm. $14/Lg. $21</div>
+            </div>
+
+            <div class="item">
+                <div class="name">The Power Slide</div>
+                <hr class="item-sep">
+                <div class="desc">Sausage, garlic, caramelized onions & goat cheese. Sausage, garlic, caramelized onions & goat cheese.</div>
+                <div class="price">Sm. $14/Lg. $21</div>
+            </div>
+
+            <div class="item">
+                <div class="name">The Tri Mom</div>
+                <hr class="item-sep">
+                <div class="desc">Our take on a Greek Pizza with mozzarella, cheddar, provolone, feta & parmesan cheeses topped with tomato & spinach.</div>
+                <div class="price">Sm. $14/Lg. $21</div>
+            </div>
+
+            <div class="item">
+                <div class="name">The Down Hiller</div>
+                <hr class="item-sep">
+                <div class="desc">Roasted chicken, buffalo sauce, kalamata olives, red onions and blue cheese topped w/ranch dressing.</div>
+                <div class="price">Sm. $14/Lg. $21</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Meatlovers</div>
+                <hr class="item-sep">
+                <div class="desc">Our organic pizza dough topped with pizza sauce, mozzarella/cheddar cheese, pepperoni, sausage, prosciutto & bacon.</div>
+                <div class="price">Sm. $14/Lg. $21</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Pesto</div>
+                <hr class="item-sep">
+                <div class="desc">Our organic pizza dough topped with homemade pesto, mozzarella/cheddar cheese, oven roasted chicken, mushrooms and
+                sundried tomatoes.</div>
+                <hr class="item-sep">
+                <div class="extra"></div>
+                <div class="price">Sm. $14/Lg. $21</div>
+            </div>
+        </div>
+        
+        <div class="extra-info">
+            <hr class="item-sep">
+            <div class="info">We try very hard to keep our menu prices low, however due to the increasing cost of our produce and other food costs as
+            well as labor costs, we have had to make some changes to our pricing.</div>
+        </div>
+        
+    </div>
+
+    </div>
+    </div>
+    </div>
 
 
 </body>
