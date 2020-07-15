@@ -142,8 +142,12 @@ h2{
     font-size: 2.1vw;
 }
 
-.cren {
-    max-width: 70vw;
+.cren-top {
+    max-width: 437px; /*1: 0.875 to cren bot*/
+}
+
+.cren-bot {
+    max-width: 500px;
 }
 
 .food {
@@ -192,13 +196,14 @@ nav {
     font-family: 'Caudex', serif;
 }
 
-.menu {
-    margin: auto;
-    width: 10%;
+.menu {    
+    width: 100%;
 }
 
 .menu a {
+    text-align: center;
     text-decoration: none;
+    display: inline-block;
 }
 
 .menu a button {
@@ -209,7 +214,7 @@ nav {
     text-align: center;
     text-decoration: none;
     display: block;
-    font-size: 3rem;
+    font-size: 60px;
     border-radius: 10%;
     padding: 5%;
     border: 0.2rem solid black;

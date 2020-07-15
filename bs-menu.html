@@ -145,6 +145,59 @@
             
         }
 
+        .sep-adjust {
+            margin-left: 250px;
+        }
+
+        @media screen and (max-width: 930px) {
+            .menu__links {
+                width: 0px;
+                transition: ease-out 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+            }
+
+
+
+
+            /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+            #menu-display {
+                transition: ease-in .5s
+                /*transition: margin-left .5s;*/ /* If you want a transition effect */
+                padding: 20px;
+            }
+
+            #bikeContainer1 {
+                margin-left: 0px;
+            }
+
+            .menu-content {
+                margin-left: 0px;
+            }
+
+            .menu-display .extra-info {
+                margin-left: 0px;
+            }
+
+            .section-title {
+                margin-left: 0px;
+            }
+
+            .sep-adjust {
+                margin-left: 0px;
+            }
+
+            .menu-display .extra-info {
+                margin-left: 0px;
+            }
+
+            .extra-info {
+                margin-left: 0px;
+            }
+
+            .hamburg {
+                display: block !important;
+            }
+        }
+
         .cren-center {
             align-content: center;
         }
@@ -162,28 +215,31 @@
         }
 
         .extra-info {
-            text-align: center;
-            margin-left: 250px;
+            
+            text-align:inherit;
+            margin-left: 260px;
         }
 
         .info {
-            text-align: center; 
+            /*max-width: 500px;*/
+        }
+
+        .info {
             font-family: 'Caudex';
-            word-wrap: break-word;
+            text-align: center;
+        }
+
+        .hamburg  {
+            display: none;
+            background-color: transparent;
+            color: white;
+            text-decoration: none;
+            text-align: end;
         }
 
 
     </style>
 
-    <script language='javascript'>
-
-        /*$(document).ready(function () {
-            $("#header").slideDown(1000);
-        });*/
-
-        //Bike wheels moving animation
-        //style="display: none"
-    </script>
 </head>
 
 
@@ -192,7 +248,8 @@
     <div class="backimage"></div>
 
     <div class="parallax_menu">
-    <div id="header">Open Now! /// Closed, open XX:XX on XXXX</div>
+    <div id="header">Open Now! /// Closed, open XX:XX on XXXX 
+        <button class="hamburg" onclick="openNav()">☰</button></div>
     <div id="bikeContainer1">
     <!--<img id="bike1" src="resources/bike2h.svg" alt="Bike Logo">-->
 
@@ -209,7 +266,8 @@
     </div>
 
 
-    <div class="menu__links">
+    <div class="menu__links" id="menu__links">
+        <div><button class="hamburg" onclick="closeNav()">☰</button></div>
         <div class="cren-center"><img class="cren-top" src="resources/divtop.svg"></div>
         <div><a href="index.html"><button>Home</button></a></div>
         <div><a href="#Appetizers"><button>Appetizers</button></a></div>
@@ -224,7 +282,9 @@
     </div>
 
     <div id="menu-display">
-        <div style="margin-left: 250px;"> <hr class="item-sep"></div>
+        <div class="sep-adjust">
+            <hr class="item-sep">
+        </div>
         <a name="Appetizers"></a>
         <div class="section-title">Appetizers</div>
         
@@ -302,7 +362,7 @@
             </div>
         </div>
 
-        <div style="margin-left: 250px;">
+        <div class="sep-adjust">
             <hr class="item-sep">
         </div>
 
@@ -311,8 +371,8 @@
         
         <div class="extra-info">
             <hr class="item-sep">
-            <div class="info" style="text-align: center; font-family: 'Caudex'">Dressings: Blue Cheese, Ranch, Peppercorn Parmesan, Balsamic, Honey Mustard, Extra Dressing $0.50 each</div>
-            <div class="info" style="text-align: center; font-family: 'Caudex'">Add Chicken to any salad for $4 - Add Salmon (6oz) $9 - Add Feta $1.50 - Add Goat Cheese $2.50</div>
+            <div class="info">Dressings: Blue Cheese, Ranch, Peppercorn Parmesan, Balsamic, Honey Mustard, Extra Dressing $0.50 each</div>
+            <div class="info">Add Chicken to any salad for $4 - Add Salmon (6oz) $9 - Add Feta $1.50 - Add Goat Cheese $2.50</div>
             <hr class="item-sep">
         </div>
 
@@ -353,11 +413,11 @@
 
         <div class="extra-info">
             <hr class="item-sep">
-            <div class="info" style="text-align: center; font-family: 'Caudex'">**ALLERGY WARNING: Although we have gluten free options, they are not prepped in a gluten free environment. Please alert
+            <div class="info"  >**ALLERGY WARNING: Although we have gluten free options, they are not prepped in a gluten free environment. Please alert
             your server to any allergies.</div>
         </div>
 
-        <div style="margin-left: 250px;">
+        <div class="sep-adjust">
             <hr class="item-sep">
         </div>
 
@@ -366,13 +426,10 @@
         <div class="section-title">Sandwiches</div>
 
 
-<!--CHAN?GE NAME TO CLASS-->
-
-
         <div class="extra-info">
             <hr class="item-sep">
-            <div class="info" style="text-align: center; font-family: 'Caudex'">All Sandwiches served with a generous side of fries.</div>
-            <div class="info" style="text-align: center; font-family: 'Caudex'">Substitute side salad for fries add $1.75 - Substitute Truffle
+            <div class="info"  >All Sandwiches served with a generous side of fries.</div>
+            <div class="info"  >Substitute side salad for fries add $1.75 - Substitute Truffle
             Fries for fries add $2.50 - Substitute **Homemade Gluten Free Bread add $4</div>
             <hr class="item-sep">
         </div>
@@ -490,13 +547,13 @@
 
         <div class="extra-info">
             <hr class="item-sep">
-            <div class="info" style="text-align: center; font-family: 'Caudex'">**Our Pork & BBQ sauce are not gluten free. All gluten free bread is cooked on the same grill as products which contain
+            <div class="info"  >**Our Pork & BBQ sauce are not gluten free. All gluten free bread is cooked on the same grill as products which contain
             gluten</div>
         </div>
 
         
 
-        <div style="margin-left: 250px;">
+        <div class="sep-adjust">
             <hr class="item-sep">
         </div>
         <a name="Tacos"></a>
@@ -504,7 +561,7 @@
 
         <div class="extra-info">
             <hr class="item-sep">
-            <div class="info" style="text-align: center; font-family: 'Caudex'">All Tacos available in a soft tortilla or hard shell. Substitute side salad or fries for chips & salsa add $2.</div>
+            <div class="info"  >All Tacos available in a soft tortilla or hard shell. Substitute side salad or fries for chips & salsa add $2.</div>
             <hr class="item-sep">
         </div>
 
@@ -552,13 +609,13 @@
 
         <div class="extra-info">
             <hr class="item-sep">
-            <div class="info" style="text-align: center; font-family: 'Caudex'">*Choose your own flavor w/your choice of sauce: horseradish, cilantro-lime, habanero or spicy lime add $0.75</div>
-            <div class="info" style="text-align: center; font-family: 'Caudex'">**Veggie Tacos & Salmon Tacos are G.F in a corn tortilla (tortilla is cooked in the same fryolator as products that
+            <div class="info"  >*Choose your own flavor w/your choice of sauce: horseradish, cilantro-lime, habanero or spicy lime add $0.75</div>
+            <div class="info"  >**Veggie Tacos & Salmon Tacos are G.F in a corn tortilla (tortilla is cooked in the same fryolator as products that
             contain gluten)</div>
         </div>
         
 
-        <div style="margin-left: 250px;">
+        <div class="sep-adjust">
             <hr class="item-sep">
         </div>
         <a name="Entrees"></a>
@@ -566,7 +623,7 @@
 
         <div class="extra-info">
             <hr class="item-sep">
-            <div class="info" style="text-align: center; font-family: 'Caudex'">All Entries served with a side salad</div>
+            <div class="info"  >All Entries served with a side salad</div>
             <hr class="item-sep">
         </div>
         
@@ -636,7 +693,7 @@
         
         <div class="extra-info">
             <hr class="item-sep">
-            <div class="info" style="text-align: center; font-family: 'Caudex'">**ALLERGY WARNING: Although we have gluten free
+            <div class="info"  >**ALLERGY WARNING: Although we have gluten free
                 options, they are not prepped in a gluten free environment. Please alert
                 your server to any allergies.</div>
         </div>
@@ -646,7 +703,7 @@
 
         
 
-        <div style="margin-left: 250px;">
+        <div class="sep-adjust">
             <hr class="item-sep">
         </div>
         <a name="Wood Fired Pizza"></a>
@@ -654,16 +711,16 @@
 
         <div class="extra-info">
             <hr class="item-sep">
-            <div class="info" style="text-align: center; font-family: 'Caudex'">Hand stretched organic dough Sm. 12 inch $9 - Lg. 16 inch $14</div>
-            <div class="info" style="text-align: center; font-family: 'Caudex'">Additional Toppings: Small $1.25/Large $2.25</div>
+            <div class="info"  >Hand stretched organic dough Sm. 12 inch $9 - Lg. 16 inch $14</div>
+            <div class="info"  >Additional Toppings: Small $1.25/Large $2.25</div>
             <hr class="item-sep">
-            <div class="info" style="text-align: center; font-family: 'Caudex'">Toppings: Artichokes, Arugula, Bacon, Banana Peppers, Black Olives, Caramelized Onions, Chicken, Garlic, Jalapenos,
+            <div class="info"  >Toppings: Artichokes, Arugula, Bacon, Banana Peppers, Black Olives, Caramelized Onions, Chicken, Garlic, Jalapenos,
             Kalamata Olives, Mesclun Greens, Mushrooms, Pork, Prosciutto, Red Onion, Pepperoni, Roasted Peppers, Sausage, Spinach or
             Sundried Tomatoes.</div>
             <hr class="item-sep">
-            <div class="info" style="text-align: center; font-family: 'Caudex'">Cheeses (Sm. $1/Lg $2): Add Fresh Mozz, Feta, Blue Cheese, Provolone, Parmesan. Add Goat (Sm. $2/Lg $4)</div>
+            <div class="info"  >Cheeses (Sm. $1/Lg $2): Add Fresh Mozz, Feta, Blue Cheese, Provolone, Parmesan. Add Goat (Sm. $2/Lg $4)</div>
             <hr class="item-sep">
-            <div class="info" style="text-align: center; font-family: 'Caudex'">**Sub Vegan Cheese Sm. $2.75 - Lg. $5. Sub GLUTEN FREE/VEGAN CRUST $3 (small only)</div>
+            <div class="info"  >**Sub Vegan Cheese Sm. $2.75 - Lg. $5. Sub GLUTEN FREE/VEGAN CRUST $3 (small only)</div>
             <hr class="item-sep">
         </div>
         
@@ -687,7 +744,7 @@
         </div>
         
 
-        <div style="margin-left: 250px;">
+        <div class="sep-adjust">
             <hr class="item-sep">
         </div>
         <a name="Specialty Pizzas"></a>
@@ -695,9 +752,9 @@
 
         <div class="extra-info">
             <hr class="item-sep">
-            <div class="info" style="text-align: center; font-family: 'Caudex'">Dressings: Blue Cheese, Ranch, Peppercorn
+            <div class="info"  >Dressings: Blue Cheese, Ranch, Peppercorn
                 Parmesan, Balsamic, Honey Mustard, Extra Dressing $0.50 each</div>
-            <div class="info" style="text-align: center; font-family: 'Caudex'">Add Chicken to any salad for $4 - Add Salmon
+            <div class="info"  >Add Chicken to any salad for $4 - Add Salmon
                 (6oz) $9 - Add Feta $1.50 - Add Goat Cheese $2.50</div>
             <hr class="item-sep">
         </div>
@@ -820,6 +877,18 @@
 
 
 </body>
+
+<script language='javascript'>
+    function openNav() {
+        document.getElementById("menu__links").style.width = "250px";
+        document.getElementById("menu-display").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("menu__links").style.width = "0";
+        document.getElementById("menu-display").style.marginLeft = "0";
+    }
+</script>
 <script src="bikestop/scripts/main.js">
 //<img id = "flower" src="bikestop/resources/bw-flower2.svg" alt="">
 
